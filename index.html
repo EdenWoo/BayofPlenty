@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html land="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Bay of Plenty</title>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script src="js/map.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" style="text/css" href="css/blueberry.css">
+<link rel="stylesheet" type="text/css" href="css/bay.css">
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="90">
+
+	<!-- Affix -->
+	<div class="container-fluid bg-4" style="height:150px;">
+	  <h2 class="text-center">Welcome to Bay of Plenty!</h2>
+	  <p>The Bay of Plenty, known in Māori as Te Moana-a-Toi, is a large indentation in the northern coast of New Zealand's North Island. It stretches from the Coromandel Peninsula in the west to Cape Runaway in the east, a wide stretch of some 259 km of open coastline. </p>
+	  <p class="text-right">--From Wikipedia</p>
+	</div>
+
+	<!-- Nav Bar -->
+	<nav class="navbar navbar-default navbar-inverse" data-spy="affix" data-offset-top="147">
+	  <div class="container-fluid">
+	    <!--Navigation bar header-->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>                        
+	      </button>
+	      <a class="navbar-brand" href="#Carousel"><img alt="brand" width="117" height="30" src="img/NewZealand.png"></a>
+	    </div>
+	    <!--Navigation bar collapse area-->
+	    <div class="collapse navbar-collapse" id="myNavbar">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#Carousel">HOME</a></li>
+	        <li><a href="#info">INFO</a></li>
+	        <li><a href="#tour">TOUR</a></li>
+	        <li><a href="#contact">CONTACT</a></li>
+	        <li class="dropdown">
+	          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+	          <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#">Accomdation</a></li>
+	            <li><a href="#">Where To Eat</a></li>
+	            <li><a href="#">Events</a></li> 
+	          </ul>
+	        </li>
+	        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+
+	<!-- First Container (Grid) -->
+	<div class="Container-fluid" id="Carousel">
+	  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+	    <!-- Indicators -->
+	    <ol class="carousel-indicators">
+	      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	      <li data-target="#myCarousel" data-slide-to="1"></li>
+	      <li data-target="#myCarousel" data-slide-to="2"></li>
+	      <li data-target="#myCarousel" data-slide-to="3"></li>
+	    </ol>
+
+	    <!-- Wrapper for slides -->
+	    <div class="carousel-inner" role="listbox">
+	      <div class="item active">
+	        <img src="img/Cow.jpg" alt="Chania" width="460" height="345">
+	        <div class="carousel-caption">
+	          <h3>Chania</h3>
+	          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+	        </div>
+	      </div>
+
+	      <div class="item">
+	        <img src="img/Heat.jpg" alt="Chania" width="1122" height="945"><div class="carousel-caption">
+	          <h3>Chania</h3>
+	          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+	        </div>
+	      </div>
+	    
+	      <div class="item">
+	        <img src="img/Grass.jpg" alt="Flower" width="460" height="345">
+	        <div class="carousel-caption">
+	          <h3>Chania</h3>
+	          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+	        </div>
+	      </div>
+
+	      <div class="item">
+	        <img src="img/Moutain.jpg" alt="Flower" width="460" height="345">
+	        <div class="carousel-caption">
+	          <h3>Chania</h3>
+	          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+	        </div>
+	      </div>
+
+	     <div class="item">
+	        <img src="img/Road.jpg" alt="Flower" width="460" height="345">
+	        <div class="carousel-caption">
+	          <h3>Chania</h3>
+	          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+	        </div>
+	      </div>
+
+	     <div class="item">
+	        <img src="img/Lake.jpg" alt="Flower" width="460" height="345">
+	        <div class="carousel-caption">
+	          <h3>Chania</h3>
+	          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+	        </div>
+	      </div>
+	    </div>
+
+	    <!-- Left and right controls -->
+	    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	      <span class="sr-only">Previous</span>
+	    </a>
+	    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	      <span class="sr-only">Next</span>
+	    </a>
+	  </div>
+	</div>
+
+	<!-- Second Container (Grid) -->
+	<div class="container-fluid text-center" id="info">    
+	  <h3 class="margin"></h3><br>
+	  <div class="row">
+		    <div class="col-sm-4">
+				<img src="img/contact.png" />
+				<h1>Ask Information Here!</h1>
+				<p>You can ask information here.</p>
+		    </div>
+		    <div class="col-sm-4">
+				<a href="map.html" >
+					<img src="img/location.png"/>
+				</a>
+				<h1>Locations To Go!</h1>
+				<p>Find a location here</p>
+		    </div>
+		    <div class="col-sm-4">
+				<img src="img/check.png" />
+				<h1>Check List!</h1>		
+				<p>Check List Before Go.</p>
+		    </div>
+		</div>
+	</div>
+
+	<h3 class="margin"></h3><br>
+	<h3 class="margin"></h3><br>
+
+	<!-- Third Container (Grid) -->
+	<div class="container-fluid text-center" id="tour">    
+	  <h3 class="margin">Where To Go?</h3><br>
+	  <div class="row">
+	    <div class="col-sm-3">
+	      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	      <img src="http://www.w3schools.com/bootstrap/birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+	    </div>
+	    <div class="col-sm-3"> 
+	      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	      <img src="http://www.w3schools.com/bootstrap/birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+	    </div>
+	    <div class="col-sm-3"> 
+	      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	      <img src="http://www.w3schools.com/bootstrap/birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+	    </div>
+	    <div class="col-sm-3"> 
+	      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	      <img src="http://www.w3schools.com/bootstrap/birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+	    </div>
+	       <div class="col-sm-3">
+	      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	      <img src="http://www.w3schools.com/bootstrap/birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+	    </div>
+	    <div class="col-sm-3"> 
+	      <p>Bring your family, swimsuit & picnic and have a day out with the family.</p>
+	      <img src="img/park.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+	    </div>
+	    <div class="col-sm-3"> 
+	      <p>Dophin Seafaris will take you on a marine adventure to watch or swim with wild dohpin</p>
+	      <img src="img/Dophin.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+	    </div>
+	    <div class="col-sm-3"> 
+	      <p>FERNLAND SPA:Take a dip in the main pool or time out in one of our wonderful spas</p>
+	      <img src="img/spa.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+	    </div>
+	  </div>
+	</div>
+
+	<h3 class="margin"></h3><br>
+
+<!-- Fourth Container (Map) -->
+	<div class="container-fluid center-block" id="tour">    
+	<div id="googleMap" style="width:1000px;height:500px;position: relative;"></div>
+	</div>
+
+
+	<h3 class="margin"></h3><br>
+	<h3 class="margin"></h3><br>
+	<h3 class="margin"></h3><br>
+	<h3 class="margin"></h3><br>
+	<!-- Footer -->
+	<div class="modal-footer ">
+      <div class="container-fluid bg-3 text-center">    
+		  <h3 class="margin"></h3><br>
+		  <div class="row">
+			    <div class="col-sm-4">
+				<h3><b>The North Island Travel</b></h3>
+				<p><b>111-5555-5555</b></p>
+				<p>170 abc street</p>
+				<p>aaaa@gmail.com</p>
+
+			    </div>
+			    <div class="col-sm-4">
+						<h3><b>Connect With Us!</b></h3>
+						<ul class="list-inline">
+						<li><a href="#"><img src="img/facebook1.png"></a></li>
+						<li><a href="#"><img src="img/googleplus.png"></a></li>
+						<li><a href="#"><img src="img/twitter1.png"></a></li>
+						<li><a href="#"><img src="img/youtube1.png"></a></li>
+						</ul>
+			    </div>
+			    <div class="col-sm-4">			
+					<img src="img/travel.png">
+			    </div>
+			</div>
+		</div>
+    </div>
+</body>
+</html>

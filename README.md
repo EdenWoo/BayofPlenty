@@ -1,1 +1,1 @@
-# BayofPlenty
+http://www.latlong.net/  get positions.

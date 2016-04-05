@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html land="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bay of Plenty</title>
+<<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" style="text/css" href="css/blueberry.css">
+<link rel="stylesheet" style="text/css" href="css/style.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(-37.955856,176.957474),
+    zoom:8,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+<!---->
+  var myCenter=new google.maps.LatLng(-37.638654,176.183627);
+  var marker=new google.maps.Marker({
+  	position:myCenter,
+  	});
+  marker.setMap(map);
+
+  var infowindow = new google.maps.InfoWindow({
+  content:"Mount Maunganui"
+  });
+  infowindow.open(map,marker);
+<!---->
+  var myCenter1=new google.maps.LatLng(-38.355873,176.367498);
+  var marker1=new google.maps.Marker({
+  	position:myCenter1,
+  	});
+  marker1.setMap(map);
+
+  var infowindow1 = new google.maps.InfoWindow({
+  content:"Waiotapu"
+  });
+  infowindow1.open(map,marker1);
+<!---->
+  var myCenter2=new google.maps.LatLng(-38.078054,176.266646);
+  var marker2=new google.maps.Marker({
+  	position:myCenter2,
+  	});
+  marker2.setMap(map);
+
+  var infowindow2 = new google.maps.InfoWindow({
+  content:"Lake Roturua"
+  });
+  infowindow2.open(map,marker2);
+
+  <!---->
+  var myCenter3=new google.maps.LatLng(-38.226667,176.506667);
+  var marker3=new google.maps.Marker({
+  	position:myCenter3,
+  	});
+  marker3.setMap(map);
+
+  var infowindow3 = new google.maps.InfoWindow({
+  content:"Mount Tarawera"
+  });
+  infowindow3.open(map,marker3);
+
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+</script>
+</head>
+<body>
+	<header>
+		<a href="#" id="logo"></a>
+		<nav>
+			<a href="#" id="menu-icon"></a>
+			<ul>
+				<li><a href="index.html" >Home</a></li>
+				<li><a href="#">Accomdation</a></li>
+				<li><a href="#">Where To Eat</a></li>
+				<li><a href="#">Events</a></li>
+				<li><a href="map.html" class="current">Map</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	
+	<div id="googleMap" style="width:1250px;height:800px;position: relative;margin-top: 100px;"></div>
+
+	<footer>
+		<section>
+			<h3><b>The North Island Travel</b></h3>
+			<p><b>111-5555-5555</b></p><br><br>
+			170 abc street<br>
+			ccc, ddd 111100<br>
+			aaaa@gmail.com
+		</section>
+		<section>
+			<h3><b>Connect With Us!</b></h3>
+			<ul class="social">
+				<li><a href="#"><img src="img/facebook1.png"></a></li>
+				<li><a href="#"><img src="img/googleplus.png"></a></li>
+				<li><a href="#"><img src="img/twitter1.png"></a></li>
+				<li><a href="#"><img src="img/youtube1.png"></a></li>
+			</ul>
+		</section>
+		<section>
+			<img src="img/travel.png">
+		</section>
+	</footer>
+	<footer class="second">
+		<p>@copyright - The North Island Travel, 2016.</p>
+	</footer>
+</body>
+</html>
