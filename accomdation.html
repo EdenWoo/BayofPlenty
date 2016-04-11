@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html land="en" ng-app="myApp">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Bay of Plenty</title>
+
+<style>
+  body {
+      position: relative;
+  }
+  ul.nav-pills {
+  	  margin-top: 10px;
+      top: 20px;
+      position: fixed;
+  }
+  div.col-sm-9 div {
+      height: 250px;
+      font-size: 28px;
+  }
+  
+  @media screen and (max-width: 810px) {
+    #section1, #section2, #section3, #section41, #section42  {
+        margin-left: 150px;
+    }
+  }
+  </style>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+<!-- AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+
+<script src="js/app.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/bay.css">
+
+</head>
+<body data-target=".navbar" data-offset="90" ng-controller="AccCtrl">
+
+<!-- Affix -->
+	<!-- Nav Bar -->
+  <nav class="navbar navbar-default navbar-inverse" data-spy="affix" data-offset-top="147">
+    <div class="container-fluid">
+      <!--Navigation bar header-->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#Carousel"><img alt="brand" width="117" height="30" src="img/NewZealand.png"></a>
+      </div>
+      <!--Navigation bar collapse area-->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="index.html#things">THINGS TO DO</a></li>
+          <li><a href="eat.html">WHERE TO EAT</a></li>
+          <li><a href="accomdation.html">WHERE TO STAY</a></li>
+
+          <li class="dropdown">
+            <a class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown" href="#">
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="login.html">Login</a></li>
+              <li><a href="resgister.html">Register</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- Nav Bar ends -->
+
+
+<!--houses list-->
+
+
+<div class="container" style="margin-top: 10px;"> 
+  <ul class="list-group col-xs-12 col-sm-12">
+
+    <li class="list-group-item">
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="control-label col-sm-1">Sort</label>
+          <div class="col-sm-6">
+              <select class="form-control" name="category" ng-model="orderProp">
+                  <option value="name">By Name</option>
+                  <option value="description">By Description</option>
+
+              </select>
+            </div>
+          </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1">Search</label>
+          <div class="col-sm-6">          
+            <input ng-model="query" type="text" class="form-control" placeholder="Search Content" aria-describedby="basic-addon2">
+          </div>
+        </div>
+      </form>
+    </li>    
+  </ul>
+</div>
+
+
+<div class="container">
+    <div class="row">
+          <div class="panel panel-default">
+                 <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="house in houses | filter:query | orderBy:orderProp">
+                        <div class="col-xs-12 col-sm-3">
+                          <img ng-src="{{house.image}}" alt="{{house.name}}" >
+                        </div>
+						<div class="col-xs-12 col-md-1">
+					    </div>
+
+                        <div class="col-xs-12 col-sm-8">
+                            <h2><a>{{house.name}} </a> <h2></br>
+      						          <p><a>{{house.description}}</a><p></br>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                </ul>
+          </div>
+      </div>
+  </div>
+</div>
+
+	
+</body>
+</html>

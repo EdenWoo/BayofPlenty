@@ -20,12 +20,6 @@
       height: 250px;
       font-size: 28px;
   }
-
-  #section1 {color: #fff; background-color: #1E88E5;}
-  #section2 {color: #fff; background-color: #673ab7;}
-  #section3 {color: #fff; background-color: #ff9800;}
-  #section41 {color: #fff; background-color: #00bcd4;}
-  #section42 {color: #fff; background-color: #009688;}
   
   @media screen and (max-width: 810px) {
     #section1, #section2, #section3, #section41, #section42  {
@@ -47,17 +41,17 @@
 <!-- AngularJS -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
 
-<script src="../js/app.js"></script>
+<script src="js/app.js"></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="../css/bay.css">
+<link rel="stylesheet" type="text/css" href="css/bay.css">
 
 </head>
-<body data-target=".navbar" data-offset="90" ng-controller="AccCtrl">
+<body data-target=".navbar" data-offset="90" ng-controller="EatCtrl">
 
 <!-- Affix -->
-	<!-- Nav Bar -->
-	<nav class="navbar navbar-default navbar-inverse"  data-offset-top="0">
+<!-- Nav Bar -->
+	<nav class="navbar navbar-default navbar-inverse" data-spy="affix" data-offset-top="147">
 	  <div class="container-fluid">
 	    <!--Navigation bar header-->
 	    <div class="navbar-header">
@@ -66,29 +60,29 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>                        
 	      </button>
-	      <a class="navbar-brand" href="#Carousel"><img alt="brand" width="117" height="30" src="../img/NewZealand.png"></a>
+	      <a class="navbar-brand" href="#Carousel"><img alt="brand" width="117" height="30" src="img/NewZealand.png"></a>
 	    </div>
 	    <!--Navigation bar collapse area-->
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="../index.html#Carousel">HOME</a></li>
-	        <li><a href="../index.html#info">INFO</a></li>
-	        <li><a href="../index.html#tour">TOUR</a></li>
-	        <li><a href="../index.html#contact">Accomdation</a></li>
+	        <li><a href="index.html">HOME</a></li>
+	        <li><a href="index.html#things">THINGS TO DO</a></li>
+	        <li><a href="eat.html">WHERE TO EAT</a></li>
+	        <li><a href="accomdation.html">WHERE TO STAY</a></li>
+
 	        <li class="dropdown">
-	          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+	          <a class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown" href="#">
 	          <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
-	            <li><a href="#">Accomdation</a></li>
-	            <li><a href="#">Where To Eat</a></li>
-	            <li><a href="#">Events</a></li> 
+	            <li><a href="login.html">Login</a></li>
+	            <li><a href="resgister.html">Register</a></li>
 	          </ul>
 	        </li>
-	        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
 	      </ul>
 	    </div>
 	  </div>
 	</nav>
+<!-- Nav Bar ends -->
 
 
 <!--houses list-->
@@ -125,16 +119,16 @@
     <div class="row">
           <div class="panel panel-default">
                  <ul class="list-group">
-                    <li class="list-group-item" ng-repeat="house in houses | filter:query | orderBy:orderProp">
+                    <li class="list-group-item" ng-repeat="eat in eats | filter:query | orderBy:orderProp">
                         <div class="col-xs-12 col-sm-3">
-                          <img ng-src="{{house.image}}" alt="{{house.name}}" >
+                          <img ng-src="{{eat.image}}" alt="{{eat.name}}" >
                         </div>
 						<div class="col-xs-12 col-md-1">
 					    </div>
 
                         <div class="col-xs-12 col-sm-8">
-                            <h2><a>{{house.name}} </a> <h2></br>
-      						          <p><a>{{house.description}}</a><p></br>
+                            <h2><a>{{eat.name}} </a> <h2></br>
+      						<p><a>{{eat.description}}</a><p></br>
                         </div>
                         <div class="clearfix"></div>
                     </li>
